@@ -7,7 +7,7 @@ var idRegex = /^[A-Za-z][A-Za-z0-9]*$/;
 function categorizeTestCases(testCases) {
     return testCases.map(function (testCase) {
         if (testCase === "then" || testCase === "if" || testCase === "else")
-            return "(".concat(testCase, ",)");
+            return "(".concat(testCase, ",").concat(testCase.toUpperCase(), ")");
         if (testCase === "<" ||
             testCase === ">" ||
             testCase === ">=" ||

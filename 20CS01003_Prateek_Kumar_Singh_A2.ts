@@ -9,7 +9,7 @@ const idRegex = /^[A-Za-z][A-Za-z0-9]*$/;
 function categorizeTestCases(testCases: string[]): string[] {
   return testCases.map((testCase) => {
     if (testCase === "then" || testCase === "if" || testCase === "else")
-      return `(${testCase},)`;
+      return `(${testCase},${testCase.toUpperCase()})`;
     if (
       testCase === "<" ||
       testCase === ">" ||

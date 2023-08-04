@@ -1,6 +1,5 @@
-# Test Case Categorization
-
-This code contains a Node.js script that categorizes test cases based on different regular expressions and operators. The purpose is to identify the type of each test case, such as whether it represents a digit, number, identifier, relational operator, or keyword (e.g., "if", "then", "else").
+# Test Case Categorization 
+This code contains a Node.js script written in typescript that categorizes test cases based on different regular expressions and operators. The purpose is to identify the type of each test case, such as whether it represents a digit, number, identifier, relational operator, or keyword (e.g., "if", "then", "else").
 
 ## Prerequisites
 
@@ -12,15 +11,15 @@ Before running the script, ensure you have [Node.js](https://nodejs.org) install
 
 2. Create an `input.txt` file and populate it with the input string containing the test cases you want to categorize. Make sure each test case is separated by spaces or newlines.
 
-3. Open a terminal or command prompt in the same directory as the `20CS01029_RITIK_GUPTA_A2.js` script.
+3. Open a terminal or command prompt in the same directory as the `20CS01003_Prateek_Kumar_Singh_A2.js` script.
 
 4. Run the following command to execute the script:
 
    ```bash
-   node 20CS01029_RITIK_GUPTA_A2.js
+    bash scriptForRunning
    ```
 
-5. The script will read the content from `input.txt`, categorize the test cases, and save the results in `output.txt`.
+5. The script will first compile the typescript code into javascript code then read the content from `input.txt`, categorize the test cases, and save the results in `output.txt`.
 
 ## Regular Expression Categories
 
@@ -58,7 +57,6 @@ Sure! Let's break down the code step by step to explain its functionality.
 
 11. Finally, the script writes the categorized test cases to `output.txt` using the `writeOutputToFile` function.
 
-
 ## Test Case Categorization
 
 The script categorizes each test case in the input string and generates an output file with the corresponding category and test case value.
@@ -68,25 +66,56 @@ The script categorizes each test case in the input string and generates an outpu
 Assuming the `input.txt` file contains the following input:
 
 ```
-if input<10    then output1=100 else output2>=100
+if input<30 then output3=300 else output4>=300
+if input<40 then output5=    300 else output4>=    300
 ```
 
 After running the script, the `output.txt` file will contain the following output:
 
 ```
-(keyword,if)
+(if,IF)
 (id,input)
 (relop,<)
-(digit,10)
-(keyword,then)
+(number,10)
+(then,THEN)
 (id,output1)
 (relop,=)
 (number,100)
-(keyword,else)
+(else,ELSE)
 (id,output2)
 (relop,>=)
 (number,100)
+(if,IF)
+(id,input)
+(relop,<)
+(number,30)
+(then,THEN)
+(id,output3)
+(relop,=)
+(number,300)
+(else,ELSE)
+(id,output4)
+(relop,>=)
+(number,300)
+(if,IF)
+(id,input)
+(relop,<)
+(number,40)
+(then,THEN)
+(id,output5)
+(relop,=)
+(number,300)
+(else,ELSE)
+(id,output4)
+(relop,>=)
+(number,300)
+
 ```
+
+##Author
+Prateek Kumar Singh
+20cs01003@iitbbs.ac.in
+github.com/pksingh21
 
 ## Note
 
